@@ -34,6 +34,7 @@ header{
     font-weight: bolder;
     text-transform: uppercase;
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: 0.4s;
 }
@@ -53,7 +54,7 @@ header{
     text-shadow: 1px 1px 0px rgb(7, 89, 136);
 }
 .navbtn:hover{
-    opacity: 0.6;
+    opacity: 0.7;
 }
 /*Main*/
 .carousel-inner h1{
@@ -289,6 +290,7 @@ display: none;
     padding: 2.5px 10px;
     margin: 0 5px 5px 0;
     cursor: default;
+    -webkit-user-select: none;
     user-select: none;
     transition: background-color 0.5s;
   }
@@ -490,8 +492,16 @@ display: none;
       background-image: linear-gradient(80deg, rgba(189, 187, 73, 0.1), transparent 50%);
     }
   }
+  /*card overlay*/
   .cardover{
     position: relative;
+    min-height: 450px;
+  }
+  .cardover .btn{
+    position: absolute;
+    z-index:10;
+    bottom: 55px;
+    right: 13px;
   }
   .cardover::after{
     position: absolute;
@@ -536,5 +546,7 @@ display: none;
 .logoicon:hover{
     background-color: #26b8bd;
     opacity: 0.7;
-    scale: 0.9;
+    /* scale: 80%; */
+    
+
 }
